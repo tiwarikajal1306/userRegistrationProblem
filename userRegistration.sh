@@ -1,9 +1,9 @@
 #!/bin/bash -x
-read -p "Enter mobile number" mobileNumber
-numberFormatPattern="^[1-9]{1}[0-9]{1}[\ ]+[1-9]{1}[0-9]{9}$"
-if [[ $mobileNumber =~ $numberFormatPattern ]]
+read -p "Enter password"  password
+passwordPattern="^[[:alnum:]]{8,12}"
+if [[ $password =~ $passwordPattern ]]
 then
-        echo "Valid mobileNumber"
+        echo "Valid password"
 else
-        echo "Invalid mobileNumber"
+        echo "Invalid password"
 fi
