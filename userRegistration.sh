@@ -1,10 +1,9 @@
 #!/bin/bash -x
-read -p "Enter emailid name" emailid
-#emailidPattern="^[[:alnum:]]+(([._+-]*)[[:alnum:]]+)*@[[:alnum:]]+.[[:alpha:]]{2,5}([.][[:alpha:]]{2,3})$"
-emailidPattern="^[[:alnum:]]+(([._+-]*)[[:alnum:]]+)*@[[:alnum:]]+.[[:alpha:]]{2,5}([.][[:alpha:]]{2,3})*$"
-if [[ $emailid =~ $emailidPattern ]]
+read -p "Enter mobile number" mobileNumber
+numberFormatPattern="^[1-9]{2}[[:blank:]][1-9]{1}[0-9]{9}$"
+if [[ $mobileNumber =~ $numberFormatPattern ]]
 then
-        echo "Valid email"
+        echo "Valid mobileNumber"
 else
-        echo "Invalid email"
+        echo "Invalid mobileNumber"
 fi
